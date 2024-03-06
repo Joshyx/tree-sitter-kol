@@ -1,0 +1,15 @@
+let te4st = 4
+
+moin_a = test + "m"
+
+struct Moin {
+    asd: int,
+}
+
+fun add(a: int, b: float) {
+    return a - b
+}
+
+add()
+
+Moin.asd(4)
