@@ -11,15 +11,17 @@
 (parameter_definition
   name: (identifier) @variable @variable.parameter
   type: (type) @type)
+(dot_expression
+  property: (identifier) @property @variable.member)
 (call_expression
   function: (binary_expression (dot_expression property: (identifier) @function.call)))
 (call_expression
   function: (identifier) @function.call)
 
 (let_statement
-  name: (identifier) @function)
+  name: (identifier) @variable)
 (reassign_statement
-  name: (identifier) @function)
+  name: (identifier) @variable)
 
 ; Structs
 ;--------------------------------
@@ -28,6 +30,11 @@
 (field_declaration
   name: (identifier) @property @variable.member
   type: (type) @type)
+
+(struct_instantiation
+  type: (identifier) @type @type.definition)
+(field_assignment
+    name: (identifier) @property @variable.member)
 
 ; Literals
 ;---------
@@ -53,6 +60,7 @@
   ";"
   "."
   ","
+  ":"
 ] @punctuation.delimiter
 
 [
@@ -97,4 +105,3 @@
   "&&"
   "||"
 ] @operator
-

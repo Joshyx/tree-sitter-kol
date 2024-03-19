@@ -63,7 +63,7 @@ module.exports = grammar({
 
         block: $ => seq(
             '{',
-            repeat(choice($._statement, $.function_definition, $.struct_definition)),
+            repeat(choice($._definition)),
             '}'
         ),
 
@@ -127,6 +127,18 @@ module.exports = grammar({
             $.binary_expression,
             $.if_statement,
             $.for_statement,
+            $.struct_instantiation,
+        ),
+        struct_instantiation: $ => prec.left(4, seq(
+            field('type', $.identifier),
+            '{',
+            field('field', commaSep($.field_assignment)),
+            '}',
+        )),
+        field_assignment: $ => seq(
+            field('name', $.identifier),
+            ':',
+            field('value', $._expression),
         ),
         unary_expression: $ => prec(4, choice(
             seq('-', $._expression),

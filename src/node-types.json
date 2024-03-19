@@ -48,6 +48,10 @@
           "named": true
         },
         {
+          "type": "struct_instantiation",
+          "named": true
+        },
+        {
           "type": "true",
           "named": true
         },
@@ -67,11 +71,39 @@
       "required": false,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
           "type": "break_statement",
           "named": true
         },
         {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "for_statement",
+          "named": true
+        },
+        {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "int",
           "named": true
         },
         {
@@ -87,7 +119,23 @@
           "named": true
         },
         {
+          "type": "string",
+          "named": true
+        },
+        {
           "type": "struct_definition",
+          "named": true
+        },
+        {
+          "type": "struct_instantiation",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
           "named": true
         }
       ]
@@ -131,6 +179,10 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "struct_instantiation",
           "named": true
         },
         {
@@ -189,6 +241,10 @@
             "named": true
           },
           {
+            "type": "struct_instantiation",
+            "named": true
+          },
+          {
             "type": "true",
             "named": true
           },
@@ -232,6 +288,10 @@
           },
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "struct_instantiation",
             "named": true
           },
           {
@@ -292,6 +352,10 @@
             "named": true
           },
           {
+            "type": "struct_instantiation",
+            "named": true
+          },
+          {
             "type": "true",
             "named": true
           },
@@ -307,6 +371,72 @@
         "types": [
           {
             "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "field_assignment",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": true
+          },
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "for_statement",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "if_statement",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "struct_instantiation",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
             "named": true
           }
         ]
@@ -402,6 +532,10 @@
           },
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "struct_instantiation",
             "named": true
           },
           {
@@ -523,6 +657,10 @@
             "named": true
           },
           {
+            "type": "struct_instantiation",
+            "named": true
+          },
+          {
             "type": "true",
             "named": true
           },
@@ -602,6 +740,10 @@
           },
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "struct_instantiation",
             "named": true
           },
           {
@@ -708,6 +850,10 @@
             "named": true
           },
           {
+            "type": "struct_instantiation",
+            "named": true
+          },
+          {
             "type": "true",
             "named": true
           },
@@ -757,6 +903,10 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "struct_instantiation",
           "named": true
         },
         {
@@ -835,6 +985,10 @@
           "named": true
         },
         {
+          "type": "struct_instantiation",
+          "named": true
+        },
+        {
           "type": "true",
           "named": true
         },
@@ -860,6 +1014,36 @@
         ]
       },
       "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "struct_instantiation",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "field_assignment",
+            "named": true
+          }
+        ]
+      },
+      "type": {
         "multiple": false,
         "required": true,
         "types": [
@@ -914,6 +1098,10 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "struct_instantiation",
           "named": true
         },
         {
@@ -1029,11 +1217,11 @@
   },
   {
     "type": "float",
-    "named": true
+    "named": false
   },
   {
     "type": "float",
-    "named": false
+    "named": true
   },
   {
     "type": "fn",

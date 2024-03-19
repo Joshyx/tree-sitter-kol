@@ -1,9 +1,14 @@
 let te4st = 4
 
-moin_a = test + "m"
+aasdsdmoin_a = test + "m"
 
 struct Moin {
     asd: int,
+}
+
+Moin {
+    asd: 4,
+    lol: if true { 4 } else { 5 },
 }
 
 fun add(a: int, b: float) {
